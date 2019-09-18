@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Optimisation Concepts &#8212; PuLP 1.6.9 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Basic Python Coding" href="basic_python_coding.html" />
+    <link rel="prev" title="The Optimisation Process" href="the_optimisation_process.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="basic_python_coding.html" title="Basic Python Coding"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="the_optimisation_process.html" title="The Optimisation Process"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">PuLP 1.6.9 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Main Topics</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="optimisation-concepts">
+<h1>Optimisation Concepts<a class="headerlink" href="#optimisation-concepts" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="linear-programing">
+<h2>Linear Programing<a class="headerlink" href="#linear-programing" title="Permalink to this headline">¶</a></h2>
+<p>The simplest type of mathematical program is a linear program. For your
+mathematical program to be a linear program you need the following
+conditions to be true:</p>
+<ul class="simple">
+<li><p>The decision variables must be real variables;</p></li>
+<li><p>The objective must be a linear expression;</p></li>
+<li><p>The constraints must be linear expressions.</p></li>
+</ul>
+<p>Linear expressions are any expression of the form</p>
+<div class="math notranslate nohighlight">
+\[a_1 x_1 + a_2 x_2 + a_3 x_3 + ... a_n x_n \{&lt;= , =, &gt;=\} b\]</div>
+<p>where the <span class="math notranslate nohighlight">\(a_i\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are known constants and <span class="math notranslate nohighlight">\(x_i\)</span> are variables. The process
+of solving a linear program is called linear programing. Linear programing
+is done via the Revised Simplex Method (also known as the Primal Simplex Method),
+the Dual Simplex Method or an Interior Point Method. Some solvers like cplex
+allow you to specify which method you use, but we won’t go into further detail
+here.</p>
+</div>
+<div class="section" id="integer-programing">
+<h2>Integer Programing<a class="headerlink" href="#integer-programing" title="Permalink to this headline">¶</a></h2>
+<p>Integer programs are almost identical to linear programs with one very
+important exception. Some of the decision variables in integer programs may
+need to have only integer values. The variables are known as integer variables.
+Since most integer programs contain a mix of continuous variables and integer
+variables they are often known as mixed integer programs. While the change
+from linear programing is a minor one, the effect on the solution process is
+enormous. Integer programs can be very difficult problems to solve and there
+is a lot of current research finding “good” ways to solve integer programs.
+Integer programs can be solved using the branch-and-bound process.</p>
+<p>Note For MIPs of any reasonable size the solution time grows
+exponentially as the number of integer variables increases.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Optimisation Concepts</a><ul>
+<li><a class="reference internal" href="#linear-programing">Linear Programing</a></li>
+<li><a class="reference internal" href="#integer-programing">Integer Programing</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="the_optimisation_process.html"
+                        title="previous chapter">The Optimisation Process</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="basic_python_coding.html"
+                        title="next chapter">Basic Python Coding</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/main/optimisation_concepts.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="basic_python_coding.html" title="Basic Python Coding"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="the_optimisation_process.html" title="The Optimisation Process"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">PuLP 1.6.9 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Main Topics</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2009-, pulp documentation team..
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.0.1.
+    </div> 
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/nz/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/nz/88x31.png" /></a><br /><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">PuLP documentation</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Pulp documentation team</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/nz/">Creative Commons Attribution-Share Alike 3.0 New Zealand License</a>.
+</center>
+
+  </body>
+</html>
